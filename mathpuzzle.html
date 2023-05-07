@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Math Puzzle</title>
+    <style>
+  		body {
+  			font-family: Arial;
+  			font-size: 14px;
+  		}
+  		h1 {
+  			font-size: 24px;
+  			margin-bottom: 10px;
+  		}
+  		p {
+  			margin-top: 0px;
+  			margin-bottom: 10px;
+  		}
+  		input[type=number] {
+  			width: 50px;
+  			padding: 5px;
+  			margin-right: 10px;
+  			border-radius: 5px;
+  			border: none;
+  			background-color: #f2f2f2;
+  		}
+  		button {
+  			padding: 5px 10px;
+  			border-radius: 5px;
+  			border: none;
+  			background-color: #4CAF50;
+  			color: white;
+  			cursor: pointer;
+  		}
+  		button:hover {
+  			background-color: #3e8e41;
+  		}
+  	</style>
+  </head>
+  <body>
+    <h1>Math Puzzle</h1>
+
+    <p>Enter your answer in the box and click on the "Check" button.</p>
+
+    <div id="question"></div>
+
+    <input type="number" id="answer">
+
+    <button onclick="checkAnswer()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+    	var questions = [
+    	    {question:"1 + 8 ", answer:"9"},
+    	    {question:"3 * 4", answer:"12"},
+    	    {question:"8 / 2", answer:"4"},
+    	    {question:"9 - 6", answer:"3"},
+    	    {question:"7 * 3", answer:"21"}
+        ];
+
+        var currentQuestion = -1;
+
+        function nextQuestion() {
+        	currentQuestion++;
+        	if(currentQuestion == questions.length) {
+        		currentQuestion = 0;
+        	}
+        	document.getElementById("question").innerHTML = questions[currentQuestion].question + " = ";
+        	document.getElementById("answer").value = "";
+        	document.getElementById("result").innerHTML = "";
+        }
+
+        function checkAnswer() {
+        	var answer = document.getElementById("answer").value.trim();
+        	if(answer == questions[currentQuestion].answer) {
+        		document.getElementById("result").innerHTML = "Correct!";
+        	} else {
+        		document.getElementById("result").innerHTML = "Incorrect!";
+        	}
+        }
+
+        nextQuestion();
+    </script>
+  </body>
+</html>
