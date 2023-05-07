@@ -44,19 +44,26 @@
 
     <div id="question"></div>
 
-    <input type="number"  id="answer">
+    <input  id="answer">
 
     <button onclick="checkAnswer()">Check</button>
 
     <p id="result"></p>
-    <p>刷新一下看看别的题呢</p>
+
+    <p>算不对叭，点下方按钮看看答案</p>
+
+    <button onclick="helpAnswer()" >help</button>
+
+    <p id='helpAnswer'></p>
+    <p>看完答案再刷新一下答答别的题呢</p>
+
     <script>
     	var questions = [
-    	    {question:" 18+25 ", answer:"43"},
-    	    {question:"sin^2 + cos^2", answer:"1"},
-    	    {question:"9-6", answer:"3"},
-    	    {question:"89.9*20", answer:"1798"},
-    	    {question:"1530/5", answer:"306"}
+    	    {question:"（52.8×5-3.9343）/0.5 ", answer:"我爱你一生一世"},
+    	    {question:"sin^2 + cos^2", answer:"我喜欢你，始终如一"},
+    	    {question:"22：00-0：03", answer:"爱你无期"},
+    	    {question:"89.9*20", answer:"一起走吧"},
+    	    {question:"1530/5", answer:"想你咯"}
         ];
 
         var currentQuestion =Math.floor(Math.random() * 5);
@@ -74,6 +81,10 @@
         	} else {
         		document.getElementById("result").innerHTML = "Incorrect!";
         	}
+        }
+        function helpAnswer(){
+          var helpAnswer = questions[currentQuestion].answer;
+         document.getElementById('helpAnswer').innerHTML = helpAnswer;
         }
         nextQuestion();
     </script>
