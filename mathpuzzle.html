@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Math Puzzle</title>
-    <style>
+    <style type="text/css">
   		body {
   			font-family: Arial;
   			font-size: 14px;
@@ -44,28 +44,28 @@
 
     <div id="question"></div>
 
-    <input type="number" id="answer">
+    <input  id="answer">
 
     <button onclick="checkAnswer()">Check</button>
 
     <p id="result"></p>
 
+    <p>算不对叭，要不要看看答案</p>
+<button ></button>
+    <p>刷新一下试试呢</p>
+
     <script>
     	var questions = [
-    	    {question:"1 + 8 ", answer:"9"},
-    	    {question:"3 * 4", answer:"12"},
-    	    {question:"8 / 2", answer:"4"},
-    	    {question:"9 - 6", answer:"3"},
-    	    {question:"7 * 3", answer:"21"}
+    	    {question:"（52.8×5-3.9343）/0.5 ", answer:"我爱你一生一世"},
+    	    {question:"sin^2 + cos^2", answer:"我喜欢你，始终如一"},
+    	    {question:"22：00-0：03", answer:"爱你无期"},
+    	    {question:"89.9*20", answer:"一起走吧"},
+    	    {question:"1530/5", answer:"想你咯"}
         ];
 
-        var currentQuestion = -1;
+        var currentQuestion =Math.floor(Math.random() * 5);
 
         function nextQuestion() {
-        	currentQuestion++;
-        	if(currentQuestion == questions.length) {
-        		currentQuestion = 0;
-        	}
         	document.getElementById("question").innerHTML = questions[currentQuestion].question + " = ";
         	document.getElementById("answer").value = "";
         	document.getElementById("result").innerHTML = "";
@@ -73,7 +73,7 @@
 
         function checkAnswer() {
         	var answer = document.getElementById("answer").value.trim();
-        	if(answer == questions[currentQuestion].answer) {
+        	if(answer === questions[currentQuestion].answer) {
         		document.getElementById("result").innerHTML = "Correct!";
         	} else {
         		document.getElementById("result").innerHTML = "Incorrect!";
