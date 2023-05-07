@@ -50,9 +50,12 @@
 
     <p id="result"></p>
 
-    <p>算不对叭，要不要看看答案</p>
-<button ></button>
-    <p>刷新一下试试呢</p>
+    <p>算不对叭，点下方按钮看看答案</p>
+
+    <button onclick="helpAnswer()" >help</button>
+
+    <p id='helpAnswer'></p>
+    <p>看完答案再刷新一下答答别的题呢</p>
 
     <script>
     	var questions = [
@@ -79,7 +82,10 @@
         		document.getElementById("result").innerHTML = "Incorrect!";
         	}
         }
-
+        function helpAnswer(){
+          var helpAnswer = questions[currentQuestion].answer;
+         document.getElementById('helpAnswer').innerHTML = helpAnswer;
+        }
         nextQuestion();
     </script>
   </body>
