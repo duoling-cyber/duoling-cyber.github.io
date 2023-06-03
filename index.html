@@ -1,26 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<script id='allow-copy_script'>
+(function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()
+</script>
   <head>
-    <title>my web page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>duoling-cyber_a pioneering work</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/4.6.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <link rel='stylesheet' href="index_style.css">
+    <input type="hidden" id='w_simile' data-inspect-config='3'>
+    <script type='text/javascript' src="chrome-extension://odphnbhiddhdpoccbialllejaajemdio/scripts/inspector.js">
+    </script>
   </head>
-  <body style="background-color:lavender;">
-    <h1 style="background-color:lightskyblue;">my first website</h1>
-    <h2>I hope you like it here</h2>
-    <h3>I hope you like it here</h3>
-    <h4>I hope you like it here</h4>
-    <h5>I hope you like it here</h5>
-    <h6>I hope you like it here</h6>
-    <p style="color:midnightblue;">This is my paragraph.</p><br>
-    <p>This is my another paragraph.</p>
-     <b>Bold text</b>
-    <u>underlined text</u>
-    <i>italic text</i>
-    <em>emphasized text</em>
-    <strong>strong text</strong>
-    <sub>Subscript text</sub>
-    <sup>Supscript text</sup>
-    <img src="http://by.cuc.edu.cn/_upload/site/00/05/5/logo.png" >
-    <img src="img/campus.jpg">
-    <a href="http://by.cuc.edu.cn">This is the link to CUC's website</a>
+  <body>
+    <div class="jumbotron jumbotron-fluid" id="jumbotron">
+      <div class="container">
+        <div class="jumbotron-text">
+          <h1 class="display-4 text-light text-center">duoling_cyber</h1>
+          <p class="lead text-light text-center">NETWORK</p>
+          <hr class="my-4">
+          <p class="text-light text-center">Welcome to my website</p>
+          <p class="text-light text-center">My name is duoling and I'm a creative/planning. Enjoying diverse and interesting works.</p>
+          <a class="btn btn-primary btn-light btn-lg font-weight-lighter" href="Homepage-project.html" role="button">Learn more</a>
+        </div>
+        <div class="Connect2">
+          <div class="container text-center">
+            <div class="row text-center fixed-bottom">
+              <div class="col-12 social2">
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='video'>
+      <div class="container-fluid back-video  plays-inline">
+          <!-- autoplay 自动播放  loop循环播放  muted 声音 preload 预加载 -->
+          <video autoplay loop muted preload>
+              <source src="./img/background1.mp4">
+          </video>
+      </div>
   </body>
 </html>

@@ -1,0 +1,23 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "Cute endless loop on your desktop. Enjoy!\n\nSource low-res GIF: https://dribbble.com/shots/4513496-Infinity-Unicorn",
+	"file" : "6a41ab48117477.588f6a78d82a5_1.mp4",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0.13725490196078433 0.12156862745098039 0.1411764705882353"
+			}
+		}
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Unspecified" ],
+	"title" : "Endless Unicorn",
+	"type" : "video",
+	"visibility" : "public"
+}
