@@ -1,0 +1,329 @@
+<html lang="en"><script id="allow-copy_script">
+  (function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>公务汪</title>
+    <link rel="canonical" href="https://codepen.io/nohoid/pen/eYXpNL" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  	<link rel="stylesheet" href="./src/footer.css">
+    <link rel="stylesheet" href="./css_introduce/introduce.css">
+    <link rel="stylesheet" href="./css_introduce/normalize.min.css">
+    <link rel="stylesheet" href="./css_introduce/style.css">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+<!--lunbo-->
+<script type="module" crossorigin src="./js_introduce/lunbo.js"></script>
+<script type="module" crossorigin src="./js_introduce/lunbo1.js"></script>
+<link rel="stylesheet" href="./css_introduce/lunbo.css">
+<link rel="stylesheet" href="./css_introduce/lunbo1.css">
+<link rel="stylesheet" href="./css_introduce/lunbo2.css">
+
+
+  <input type="hidden" id="_w_simile" data-inspect-config="3"><script type="text/javascript" src="chrome-extension://odphnbhiddhdpoccbialllejaajemdio/scripts/inspector.js"></script></head>
+  <style>
+
+  .wrapper {
+    z-index: -10;
+    height: 135%;
+    width: 100%;
+    left:0;
+    right: 0;
+    top: 84;
+    bottom: 0;
+    position: absolute;
+  background: linear-gradient(124deg,   #FFE4B5,#F0E68C, #F0E68C, #FFF8DC,#FFE4B5,#FFFAF0,#FFFACD,#FAFAD2,#F5DEB3);
+  background-size: 1800% 1800%;
+
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;}
+    @media screen and (max-width: 750px) {
+      .wrapper {
+        z-index: -10;
+        height: 165%;
+        width: 100%;
+        left:0;
+        right: 0;
+        top: 84;
+        bottom: 0;
+        position: absolute;
+      background: linear-gradient(124deg,   #FFE4B5,#F0E68C, #F0E68C, #FFF8DC,#FFE4B5,#FFFAF0,#FFFACD,#FAFAD2,#F5DEB3);
+      background-size: 1800% 1800%;
+
+      -webkit-animation: rainbow 18s ease infinite;
+      -z-animation: rainbow 18s ease infinite;
+      -o-animation: rainbow 18s ease infinite;
+        animation: rainbow 18s ease infinite;
+      }
+    }
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+</style>
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+</head>
+    <body translate="no">
+      <!--background-->
+      <div class="wrapper"></div>
+      <!--navbar-->
+      <nav class="navbar navbar-expand-lg" style="background-color: #FF7F50;">
+        <div class="container-fluid custom-width">
+          <a class="navbar-brand" href="#">
+            <img src="./pic_introduce/logo.png" width="155" height="57">
+          </a>
+          <a class="navbar-brand" href="#">
+            <img src="./pic_introduce/logo1.png" width="155" height="57">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <span class="fw-bold fs-6 text-white">首页</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="fw-bold fs-6 text-white">汪汪百科</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://wuhy530.github.io/story.html">
+                  <span class="fw-bold fs-6 text-white">汪汪故事</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://cloudatlas1.github.io/questions/question.html">
+                  <span class="fw-bold fs-6 text-white">汪汪考场</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://Yuel-66.github.io/officaldoggame
+/indexgame1.html">
+                  <span class="fw-bold fs-6 text-white">汪汪乐园</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span class="fw-bold fs-6 text-white">汪汪之家</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!--carousel-->
+        <section class="position-relative" style="height: 32vw;">
+            <div id="carousel" class="carousel slide h-100" data-bs-ride="carousel">
+              <div class="carousel-inner h-100">
+                <div class="carousel-item h-100 active">
+                  <img src="./pic_introduce/dog/lunbo111.png" alt="banner1" style="width:100vw;">
+                </div>
+                <div class="carousel-item h-100">
+                  <img src="./pic_introduce/dog/lunbo22.png" alt="banner1" style="width:100vw;">
+                </div>
+                <div class="carousel-item h-100">
+                  <img src="./pic_introduce/dog/lunbo3.png" alt="banner1" style="width:100vw;">
+                </div>
+              </div>
+              <div class="nav-switch-button">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+              </div>
+            </div>
+            <div class="position-absolute top-0 w-50 end-0" style="padding: 4em;">
+              <h2 class="banner-text fw-semibold mb-4" style="color: #FFF ; shadow: 0px -1px 4px 0px #0000001A; width:10em;font-size:3em">公务汪</h2>
+              <p class="banner-text fw-semibold mb-4" style="color: #FFF ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.5em;line-height:150% ">通过天生的能力以及后天的训练从事一些特定的工作，并以最专业的姿态服务于整个社会、群体和特殊人士。</p>
+<br>
+              <p class="banner-text banner-font mb-4 " style="color: #FFF ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.3em;line-height:150%  ">
+                公务汪为促进中国工作犬事业的发展而生。我们致力于用更生动的方式让更多人了解国内工作犬事业发展的现状，了解工作犬知识，尽己所能支持工作犬事业发展。</p>
+              <p class="banner-text banner-font mb-4 " style="color: #FFF ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.3em">
+                本网站全部收益将用于中国工作犬事业发展。</p>
+            </div>
+          </section>
+          <section class="m-auto my-5 lh-lg p-5 phone-text" style="color:#447279; padding-top:0;margin-top:0;">
+            <div class="phone-text" >
+              <h3 class="fw-semibold mb-4" style="color:#4E4E4E ; shadow: 0px -1px 4px 0px #0000001A;">
+      					公务汪</h3>
+                <p class="banner-font mb-4 " style="color:#447279 ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.2em;line-height:150%">
+                通过天生的能力以及后天的训练从事一些特定的工作，并以最专业的姿态服务于整个社会、群体和特殊人士。</p>
+      				<p class="banner-font mb-4 " style="color:#447279 ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.2em;line-height:150%">
+      				公务汪为促进中国工作犬事业的发展而生。我们致力于用更生动的方式让更多人了解国内工作犬事业发展的现状，了解工作犬知识，尽己所能支持工作犬事业发展。</p>
+      				<p class="banner-font mb-4 " style="color:#447279 ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.2em">
+      					本网站全部收益将用于中国工作犬事业发展。</p>
+      			</div>
+            </section>
+
+    <!--banner-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="list-group" style="font-family: Source Sans Pro; font-weight:700; color:#4F4F4F;">
+            <a href="introduce_junjingquan.html" class="list-group-item list-group-item-action">军警犬</a>
+            <a href="introduce_soujiuquan.html" class="list-group-item list-group-item-action">搜救犬</a>
+            <a href="introduce_fuwuquan.html" class="list-group-item list-group-item-action">服务犬</a>
+          </div>
+        </div>
+
+        <!-- partial-->
+        <div class="col-sm-9">
+          <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+
+            <div class="swiper-wrapper" id="swiper-wrapper-9cd8f54adf7f2410e" aria-live="polite" style="transition-duration: 0ms;"><div class="slider-item swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="0" role="group" aria-label="1 / 7" style="width: 620px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="pic_introduce/dog/jingquan.jpg" alt="SliderImg">
+                  </div>
+                <div class="slider-item-content">
+                  <h1>警犬</h1>
+                  <br>
+                  <p>Police Dogs，又被称为K-9（Canine的谐音），是专门受训成为辅助警察和执法者的工作犬。警犬的职责有缉毒、搜索爆炸物、搜寻失踪者、寻找犯罪证据和保护警察。最常见的警犬品种是德国牧羊犬、比利时牧羊犬、罗威纳犬、拉布拉多犬、杜伯文犬、史宾格犬。现在也有其他小型犬种训练成警犬，主要是依靠其灵敏的嗅觉，进行一些搜寻的工作。</p>
+                </div>
+              </div>
+
+              <div class="slider-item swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="1" role="group" aria-label="2 / 7" style="width: 620px; opacity: 1; transform: translate3d(-620px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <a href="https://mp.weixin.qq.com/s/9JMn7zN7r-Ci8WYlro1jrA">
+                  <img class="slider-image" src="pic_introduce/dog/kunming.jpg" alt="SliderImg">
+                </a>
+                </div>
+                <div class="slider-item-content">
+                  <h1>昆明犬</h1>
+                  <br>
+                  <p>昆明犬是我们国家的原生犬种。它是从云南民间的狼犬经近40年的精心培育而成的一个新的军、警用优良品种犬。它们能适应高原气候，擅长追踪和扑咬，目前，全国有数万头昆明犬在边防哨卡；公安刑侦、缉毒、防暴、巡逻、护卫及武警、海关、企业保卫系统及民居中被广泛运用。
+                  </p>
+                  <strong>
+                  <p>点击图片可联系公安部昆明警犬基地。</p>
+                  </strong>
+                </div>
+              </div>
+
+              <div class="slider-item swiper-slide" data-swiper-slide-index="4" role="group" aria-label="3 / 7" style="width: 620px; opacity: 1; transform: translate3d(-1240px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="pic_introduce/dog/junquan.png" alt="SliderImg">
+                  </div>
+                <div class="slider-item-content">
+                  <h1>军犬</h1>
+                  <br>
+                  <p>军犬具有高度神经活动功能，它对气味的辨识能力是人的几万倍，听力是人的16倍，视野广阔，有弱光能力，善于夜间观察事物。相比于警犬，军犬应用更广泛、处境更危险、训练更严格。如携弹、侦破、缉毒、排爆、追踪、鉴别、警戒、看守、巡逻等各类任务。甚至还有一些较为保密的特殊任务，也是由军犬来完成。常见的军犬品种也是德国牧羊犬、比利时牧羊犬、罗威纳犬、拉布拉多犬、杜伯文犬、史宾格犬。</p>
+                </div>
+              </div>
+
+              <div class="slider-item swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="0" role="group" aria-label="6 / 7" style="width: 620px; opacity: 1; transform: translate3d(-3100px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="pic_introduce/dog/jingquan.jpg" alt="SliderImg">
+                  </div>
+                <div class="slider-item-content">
+                  <h1>警犬</h1>
+                  <br>
+                  <p>Police Dogs，又被称为K-9（Canine的谐音），是专门受训成为辅助警察和执法者的工作犬。警犬的职责有缉毒、搜索爆炸物、搜寻失踪者、寻找犯罪证据和保护警察。最常见的警犬品种是德国牧羊犬、比利时牧羊犬、罗威纳犬、拉布拉多犬、杜伯文犬、史宾格犬。现在也有其他小型犬种训练成警犬，主要是依靠其灵敏的嗅觉，进行一些搜寻的工作。</p>
+                </div>
+              </div>
+            <div class="slider-item swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="1" role="group" aria-label="7 / 7" style="width: 620px; opacity: 1; transform: translate3d(-3720px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <a href="https://mp.weixin.qq.com/s/9JMn7zN7r-Ci8WYlro1jrA">
+                  <img class="slider-image" src="pic_introduce/dog/kunming.jpg" alt="SliderImg">
+                </a>
+                </div>
+                <div class="slider-item-content">
+                  <h1>昆明犬</h1>
+                  <br>
+                  <p>昆明犬是我们国家的原生犬种。它是从云南民间的狼犬经近40年的精心培育而成的一个新的军、警用优良品种犬。它们能适应高原气候，擅长追踪和扑咬，目前，全国有数万头昆明犬在边防哨卡；公安刑侦、缉毒、防暴、巡逻、护卫及武警、海关、企业保卫系统及民居中被广泛运用。
+                  </p>
+                  <strong>
+                  <p>点击图片可联系公安部昆明警犬基地。</p>
+                  </strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-buttons">
+                <button class="swiper-button-prev" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-9cd8f54adf7f2410e">上一个</button>
+                <button class="swiper-button-next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-9cd8f54adf7f2410e">下一个</button>
+            </div>
+
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-bullets-dynamic" style="width: 80px;"><span class="swiper-pagination-bullet swiper-pagination-bullet-active swiper-pagination-bullet-active-main" tabindex="0" role="button" aria-label="Go to slide 1" style="left: 32px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next" tabindex="0" role="button" aria-label="Go to slide 2" style="left: 32px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next" tabindex="0" role="button" aria-label="Go to slide 3" style="left: 32px;"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4" style="left: 32px;"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5" style="left: 32px;"></span></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+      </div>
+        </div>
+
+<div class="container" style='text-align:center'>
+  <br>
+  <br>
+  <a class="btn btn-primary btn-light btn-lg font-weight-lighter btn-outline-primary" href="https://wuhy530.github.io/story.html" role="button">查看明星公务汪</a>
+</div>
+    <!--script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- partial -->
+    <script src="./js_introduce/swiper-bundle.min.js"></script>
+    <script src="./js_introduce/script.js"></script>
+
+
+
+
+</body>
+</html>

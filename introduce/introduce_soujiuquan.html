@@ -1,0 +1,354 @@
+<html lang="en"><script id="allow-copy_script">
+  (function agent() {
+    let unlock = false
+    document.addEventListener('allow_copy', (event) => {
+      unlock = event.detail.unlock
+    })
+
+    const copyEvents = [
+      'copy',
+      'cut',
+      'contextmenu',
+      'selectstart',
+      'mousedown',
+      'mouseup',
+      'mousemove',
+      'keydown',
+      'keypress',
+      'keyup',
+    ]
+    const rejectOtherHandlers = (e) => {
+      if (unlock) {
+        e.stopPropagation()
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation()
+      }
+    }
+    copyEvents.forEach((evt) => {
+      document.documentElement.addEventListener(evt, rejectOtherHandlers, {
+        capture: true,
+      })
+    })
+  })()</script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>公务汪</title>
+    <link rel="canonical" href="https://codepen.io/nohoid/pen/eYXpNL" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  	<link rel="stylesheet" href="./src/footer.css">
+    <link rel="stylesheet" href="./css_introduce/introduce.css">
+    <link rel="stylesheet" href="./css_introduce/normalize.min.css">
+    <link rel="stylesheet" href="./css_introduce/style.css">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+    <!--lunbo-->
+    <script type="module" crossorigin src="./js_introduce/lunbo.js"></script>
+    <script type="module" crossorigin src="./js_introduce/lunbo1.js"></script>
+    <link rel="stylesheet" href="./css_introduce/lunbo.css">
+    <link rel="stylesheet" href="./css_introduce/lunbo1.css">
+    <link rel="stylesheet" href="./css_introduce/lunbo2.css">
+
+  <input type="hidden" id="_w_simile" data-inspect-config="3"><script type="text/javascript" src="chrome-extension://odphnbhiddhdpoccbialllejaajemdio/scripts/inspector.js"></script></head>
+  <style>
+  .wrapper {
+    z-index: -10;
+    height: 135%;
+    width: 100%;
+    left:0;
+    right: 0;
+    top: 84;
+    bottom: 0;
+    position: absolute;
+  background: linear-gradient(124deg,   #FFE4B5,#F0E68C, #F0E68C, #FFF8DC,#FFE4B5,#FFFAF0,#FFFACD,#FAFAD2,#F5DEB3);
+  background-size: 1800% 1800%;
+
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;}
+    @media screen and (max-width: 750px) {
+      .wrapper {
+        z-index: -10;
+        height: 165%;
+        width: 100%;
+        left:0;
+        right: 0;
+        top: 84;
+        bottom: 0;
+        position: absolute;
+      background: linear-gradient(124deg,   #FFE4B5,#F0E68C, #F0E68C, #FFF8DC,#FFE4B5,#FFFAF0,#FFFACD,#FAFAD2,#F5DEB3);
+      background-size: 1800% 1800%;
+
+      -webkit-animation: rainbow 18s ease infinite;
+      -z-animation: rainbow 18s ease infinite;
+      -o-animation: rainbow 18s ease infinite;
+        animation: rainbow 18s ease infinite;
+      }
+    }
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  </style>
+
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+  <body translate="no">
+    <div class="wrapper"></div>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: #FF7F50;">
+      <div class="container-fluid custom-width">
+        <a class="navbar-brand" href="#">
+          <img src="./pic_introduce/logo.png" width="155" height="57">
+        </a>
+        <a class="navbar-brand" href="#">
+          <img src="./pic_introduce/logo1.png" width="155" height="57">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span class="fw-bold fs-6 text-white">首页</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="fw-bold fs-6 text-white">汪汪百科</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://wuhy530.github.io/story.html">
+                <span class="fw-bold fs-6 text-white">汪汪故事</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://cloudatlas1.github.io/questions/question.html">
+                <span class="fw-bold fs-6 text-white">汪汪考场</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://Yuel-66.github.io/officaldoggame
+/indexgame1.html">
+                <span class="fw-bold fs-6 text-white">汪汪乐园</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="fw-bold fs-6 text-white">汪汪之家</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--carousel-->
+            <section class="position-relative" style="height: 32vw;">
+                <div id="carousel" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                      <img src="./pic_introduce/dog/lunbo111.png" alt="banner1" style="width:100vw;">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./pic_introduce/dog/lunbo22.png" alt="banner1" style="width:100vw;">
+                    </div>
+                    <div class="carousel-item h-100">
+                      <img src="./pic_introduce/dog/lunbo3.png" alt="banner1" style="width:100vw;">
+                    </div>
+                  </div>
+                  <div class="nav-switch-button">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="position-absolute top-0 w-50 end-0" style="padding: 4em;">
+                  <h2 class="banner-text fw-semibold mb-4" style="color: #FFF ; shadow: 0px -1px 4px 0px #0000001A; width:10em;font-size:3em">公务汪</h2>
+                  <p class="banner-text fw-semibold mb-4" style="color: #FFF ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.5em;line-height:150% ">通过天生的能力以及后天的训练从事一些特定的工作，并以最专业的姿态服务于整个社会、群体和特殊人士。</p>
+    <br>
+                  <p class="banner-text banner-font mb-4 " style="color: #FFF ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.3em;line-height:150%  ">
+                    公务汪为促进中国工作犬事业的发展而生。我们致力于用更生动的方式让更多人了解国内工作犬事业发展的现状，了解工作犬知识，尽己所能支持工作犬事业发展。</p>
+                  <p class="banner-text banner-font mb-4 " style="color: #FFF ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.3em">
+                    本网站全部收益将用于中国工作犬事业发展。</p>
+                </div>
+              </section>
+              <section class="m-auto my-5 lh-lg p-5 phone-text" style="color:#447279; padding-top:0;margin-top:0;">
+                <div class="phone-text" >
+                  <h3 class="fw-semibold mb-4" style="color:#4E4E4E ; shadow: 0px -1px 4px 0px #0000001A;">
+          					公务汪</h3>
+                    <p class="banner-font mb-4 " style="color:#447279 ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.2em;line-height:150%">
+                    通过天生的能力以及后天的训练从事一些特定的工作，并以最专业的姿态服务于整个社会、群体和特殊人士。</p>
+          				<p class="banner-font mb-4 " style="color:#447279 ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.2em;line-height:150%">
+          				公务汪为促进中国工作犬事业的发展而生。我们致力于用更生动的方式让更多人了解国内工作犬事业发展的现状，了解工作犬知识，尽己所能支持工作犬事业发展。</p>
+          				<p class="banner-font mb-4 " style="color:#447279 ; shadow: 0px -1px 4px 0px #0000001A;font-size:1.2em">
+          					本网站全部收益将用于中国工作犬事业发展。</p>
+          			</div>
+                </section>
+
+    <!--banner-->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="list-group" style="font-family: Source Sans Pro; font-weight:700; color:#4F4F4F;">
+            <a href="introduce_junjingquan.html" class="list-group-item list-group-item-action">军警犬</a>
+            <a href="introduce_soujiuquan.html" class="list-group-item list-group-item-action">搜救犬</a>
+            <a href="introduce_fuwuquan.html" class="list-group-item list-group-item-action">服务犬</a>
+          </div>
+        </div>
+
+        <!-- partial-->
+        <div class="col-sm-9">
+          <div class="swiper-container swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+
+            <div class="swiper-wrapper" id="swiper-wrapper-9cd8f54adf7f2410e" aria-live="polite" style="transition-duration: 0ms;"><div class="slider-item swiper-slide swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="5" role="group" aria-label="1 / 8" style="width: 620px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="pic_introduce/dog/feixu.jpg" alt="SliderImg">
+                  </div>
+                <div class="slider-item-content">
+                  <h1>废墟搜救犬</h1>
+                  <br>
+                  <p>在自然灾难和建筑倒塌中搜寻幸存者的搜救犬。在2008年汶川大地震中，共有67条搜救犬，转战5个重灾区10天9夜，像天使一样辗转在坍塌的废墟中，用灵敏的鼻子发现了一个又一个生命。发现了地震中70%的幸存者！这些搜救犬们立下了赫赫战功，然而它们有的在救援当天，就因身负重伤而不幸离世；有的在同废墟瓦砾的长时间摩擦中留下伤痕乃至后遗症，在疼痛中度过余生；有的终究抵不过时间流逝，年岁渐渐老去。</p>
+                </div>
+              </div>
+
+              <div class="slider-item swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" role="group" aria-label="2 / 8" style="width: 620px; opacity: 1; transform: translate3d(-620px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <a href="https://mp.weixin.qq.com/s/PLJnsD3czchl9Ib19JGx5w">
+                  <img class="slider-image" src="pic_introduce/dog/soujiuquan.jpg" alt="SliderImg">
+                </a>
+                </div>
+                <div class="slider-item-content">
+                  <h1>搜救犬</h1>
+                  <br>
+                  <p>专门负责执行搜索与救援的工作犬。常见品种为德国牧羊犬、拉布拉多犬、金毛猎犬、史宾格犬等。它们在灾难救援现场发挥了独特的作用，能捕捉空气中弥漫的人体散发的一些细微气味并引导训导员接近人体的地方，同时能判定是否是幸存者，还是遇难者的遗体。在灾难搜救中，搜救犬的作用无可替代。
+                  </p>
+                  <strong>
+                  <p>点击图片可联系北京CRO应急搜救犬中心。</p></strong>
+                </div>
+              </div>
+
+              <div class="slider-item swiper-slide" data-swiper-slide-index="1" role="group" aria-label="3 / 8" style="width: 620px; opacity: 1; transform: translate3d(-1240px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="pic_introduce/dog/guangyu.png" alt="SliderImg">
+                  </div>
+                <div class="slider-item-content">
+                  <h1>广域搜救犬</h1>
+                  <br>
+                  <p>在山野、广域中协助搜救队员搜索走失人员的犬。这类犬又分为两种，一种是没有固定的气味来源，只是单纯的在荒野中寻找能找到的、最新鲜的人类气味的犬。还有一种是有明确的最后失踪位置或者走失者的物品等，根据特定的气味来源追踪的犬。其嗅觉能力非常出色，据研究表明，它们的嗅觉比人类敏感100,000倍以上。这使得它们能够嗅到人类释放的微弱气味。</p>
+                </div>
+              </div>
+              <div class="slider-item swiper-slide swiper-slide-active" data-swiper-slide-index="2" role="group" aria-label="4 / 8" style="width: 620px; transition-duration: 0ms; opacity: 1; transform: translate3d(-1860px, 0px, 0px);">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="pic_introduce/dog/zhuizongxunji.jpg" alt="SliderImg">
+                  </div>
+                <div class="slider-item-content">
+                  <h1>追踪和寻迹搜救犬</h1>
+                  <br>
+                  <br>
+                  <p>追踪搜救犬：在野外环境中根据野外气味轨迹寻找走失者的搜救犬。寻迹搜救犬：在城市环境中根据城市气味残余寻找走失者的搜救犬。一般搜救犬均需执行此类搜救任务，根据环境不同有所区分。</p>
+                </div>
+              </div>
+              <div class="slider-item swiper-slide swiper-slide-next" data-swiper-slide-index="3" role="group" aria-label="5 / 8" style="width: 620px; transition-duration: 0ms; opacity: 0; transform: translate3d(-2480px, 0px, 0px);">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="pic_introduce/dog/shuiyu.jpg" alt="SliderImg">
+                  </div>
+                <div class="slider-item-content">
+                  <h1>水域搜救犬</h1>
+                  <br>
+                  <p>在水域环境中给予溺水者救援的搜救犬。这类犬一般是以纽芬兰、拉布拉多、金毛这类喜欢水的犬种为主，它们被训练后，一般在海边浴场等海岸线跟着救生员一起巡逻，遇到有人溺水，会带着救生圈等游到溺水者身边，把他们拖回岸边。其具有出色的游泳能力和嗅觉，可以在各种水域环境中游泳，包括湖泊、河流和海洋。这些犬只通常具有浮力好、耐力强和良好的游泳姿势，可以迅速到达目标区域。</p>
+                </div>
+              </div>
+              <div class="slider-item swiper-slide swiper-slide-next" data-swiper-slide-index="4" role="group" aria-label="6 / 8" style="width: 620px; transition-duration: 0ms; opacity: 0; transform: translate3d(-2480px, 0px, 0px);">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="pic_introduce/dog/xuebeng.jpg" alt="SliderImg">
+                  </div>
+                <div class="slider-item-content">
+                  <h1>雪崩搜救犬</h1>
+                  <br>
+                  <p>在雪崩之后，协助人们在雪地上搜索被积雪掩埋的幸存者的犬。它们通过嗅觉能力和训练技巧，能够迅速找到被掩埋的人员，并协助救援人员进行救援行动。其可开展雪崩救援：雪崩搜救犬能够通过嗅觉追踪被掩埋人员的气味，并快速找到他们的位置。也能进行雪崩预警：雪崩搜救犬可以用于预警系统，通过嗅觉敏感度提前发现潜在的雪崩风险。</p>
+                </div>
+              </div>
+              <div class="slider-item swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="5" role="group" aria-label="7 / 8" style="width: 620px; opacity: 1; transform: translate3d(-3100px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="pic_introduce/dog/feixu.jpg" alt="SliderImg">
+                  </div>
+                <div class="slider-item-content">
+                  <h1>废墟搜救犬</h1>
+                  <br>
+                  <p>在自然灾难和建筑倒塌中搜寻幸存者的搜救犬。在2008年汶川大地震中，共有67条搜救犬，转战5个重灾区10天9夜，像天使一样辗转在坍塌的废墟中，用灵敏的鼻子发现了一个又一个生命。发现了地震中70%的幸存者！这些搜救犬们立下了赫赫战功，然而它们有的在救援当天，就因身负重伤而不幸离世；有的在同废墟瓦砾的长时间摩擦中留下伤痕乃至后遗症，在疼痛中度过余生；有的终究抵不过时间流逝，年岁渐渐老去。</p>
+                </div>
+              </div>
+            <div class="slider-item swiper-slide swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" role="group" aria-label="8 / 8" style="width: 620px; opacity: 1; transform: translate3d(-3720px, 0px, 0px); transition-duration: 0ms;">
+                <div class="slider-image-wrapper">
+                  <a href="https://mp.weixin.qq.com/s/PLJnsD3czchl9Ib19JGx5w">
+                  <img class="slider-image" src="pic_introduce/dog/soujiuquan.jpg" alt="SliderImg">
+                </a>
+                </div>
+                <div class="slider-item-content">
+                  <h1>搜救犬</h1>
+                  <br>
+                  <p>专门负责执行搜索与救援的工作犬。常见品种为德国牧羊犬、拉布拉多犬、金毛猎犬、史宾格犬等。它们在灾难救援现场发挥了独特的作用，能捕捉空气中弥漫的人体散发的一些细微气味并引导训导员接近人体的地方，同时能判定是否是幸存者，还是遇难者的遗体。在灾难搜救中，搜救犬的作用无可替代。
+                  </p>
+                  <strong>
+                  <p>点击图片可联系北京CRO应急搜救犬中心。</p></strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-buttons">
+                <button class="swiper-button-prev" tabindex="0" aria-label="Previous slide" aria-controls="swiper-wrapper-9cd8f54adf7f2410e">上一个</button>
+                <button class="swiper-button-next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-9cd8f54adf7f2410e">下一个</button>
+            </div>
+
+            <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-bullets-dynamic" style="width: 80px;"><span class="swiper-pagination-bullet swiper-pagination-bullet-active swiper-pagination-bullet-active-main" tabindex="0" role="button" aria-label="Go to slide 1" style="left: 32px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next" tabindex="0" role="button" aria-label="Go to slide 2" style="left: 32px;"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active-next-next" tabindex="0" role="button" aria-label="Go to slide 3" style="left: 32px;"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4" style="left: 32px;"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5" style="left: 32px;"></span></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+        </div>
+      </div>
+        </div>
+
+<div class="container" style='text-align:center'>
+  <br>
+  <br>
+  <a class="btn btn-primary btn-light btn-lg font-weight-lighter btn-outline-primary" href="https://wuhy530.github.io/story.html" role="button">查看明星公务汪</a>
+</div>
+    <!--script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- partial -->
+    <script src="./js_introduce/swiper-bundle.min.js"></script>
+    <script src="./js_introduce/script.js"></script>
+
+
+
+
+</body>
+</html>
