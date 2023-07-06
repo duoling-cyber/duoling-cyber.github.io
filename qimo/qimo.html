@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>领养狗狗</title>
+    <link rel="stylesheet" href='home-5309a1444.css'>
+    <link rel="stylesheet" href='index-624ea9aff.css'>
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+    <link rel="canonical" href="https://codepen.io/nohoid/pen/eYXpNL" />
+    <link rel="canonical" href="https://codepen.io/vikramsansare/pen/rNOYNbK" />
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
+
+
+<style>
+.wrapper {
+  height: 444.95%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(124deg,   #FFE4B5,#F0E68C, #F0E68C, #FFF8DC,#FFE4B5,#FFFAF0,#FFFACD,#FAFAD2,#F5DEB3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+</style>
+
+<script>
+  window.console = window.console || function(t) {};
+</script>
+
+<style>
+a:hover {
+  text-decoration: none;
+}
+
+header .header-logo {
+  color: #001b4f;
+    font-weight: 700;
+    font-size: 23px;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+header {
+  background: #fff;
+  box-shadow: 0 1px 5px 0 rgba(83, 83, 83, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .main-menu>li {
+  position: relative;
+}
+
+header .main-menu>li>a {
+  color: #173966;
+  font-size: 15px;
+  padding: 25px 1.5vw;
+  font-weight: 700;
+  display: block;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+header .main-menu>li.active>a {
+  color: #10bd3b;
+}
+
+header .main-menu>li:hover>a {
+  color: #10bd3b;
+}
+
+header .main-menu>li>a>i {
+  color: #03328E;
+}
+
+header .main-menu>li>a:hover>i {
+  color: #fff;
+}
+
+header .main-menu>li:hover>a i {
+  color: #fff;
+}
+
+header .main-menu .sub-menu {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 180px;
+  overflow: hidden;
+  border-top: 2px solid #f49306;
+  background: #fff;
+  box-shadow: 0 1px 5px 0 rgba(83, 83, 83, 0.2);
+  z-index: 5;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+header .main-menu .sub-menu a {
+  padding: 11px 10px;
+  display: block;
+  color: #173966;
+  font-weight: 600;
+  font-size: 15px;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+header .main-menu .sub-menu a i {
+  color: #03328E;
+}
+
+header .main-menu .sub-menu a:hover {
+  background: #10bd3b;
+  color: #fff;
+}
+
+header .main-menu>li:hover .sub-menu {
+  display: block;
+}
+
+header .header-logo figure img {
+  max-width: 200px;
+}
+
+header .demo-link {
+  margin-left: 1vw;
+}
+
+header .side-menu-close {
+  background: transparent;
+}
+
+header .side-menu-close span {
+  background: #21395F;
+  width: 28px;
+}
+
+#call-action .call-action {
+  color: #001b4f;
+  font-weight: 700;
+  font-size: 23px;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+#call-action .call-action:hover {
+  color: #10bd3b;
+}
+
+/* side menu */
+.side-menu-wrap {
+  width: 300px;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  background: #fff;
+  height: 100%;
+  box-shadow: 0 1px 5px 0 rgba(83, 83, 83, 0.2);
+  overflow-y: auto;
+  z-index: 15000;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+.side-menu-wrap.opened {
+  left: 0;
+  transition: .8s;
+  -webkit-transition: .8s;
+  -moz-transition: .8s;
+  -ms-transition: .8s;
+  -o-transition: .8s;
+}
+
+.side-menu-logo {
+  border-bottom: 2px solid #FE8204;
+}
+
+.side-menu-nav .main-menu>li {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+
+.side-menu-nav .main-menu>li>a>i {
+  color: #03328E;
+}
+
+.side-menu-nav .main-menu .sub-menu {
+  border-top: 1px solid #FE8204;
+  background: #fff;
+  display: none;
+}
+
+.side-menu-nav .main-menu .sub-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.side-menu-nav .main-menu .sub-menu a {
+  padding: 10px 22px;
+  display: block;
+  color: #212529;
+  font-weight: 600;
+  font-size: .9em;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+.side-menu-nav .main-menu .sub-menu a i {
+  color: #03328E;
+}
+
+.side-menu-nav .main-menu .sub-menu~i {
+  font-size: .8em;
+  position: absolute;
+  padding: 21px 11px;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #ccc;
+}
+
+.side-menu-nav .main-menu .sub-menu a:hover {
+  background: #F5F5F5;
+}
+
+.side-menu-nav .main-menu>li>a {
+  color: #212529;
+  padding: 15px 30px 15px 10px;
+  font-weight: 600;
+  display: block;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+.side-menu-wrap .side-menu-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.side-menu-close {
+  height: 40px;
+  width: 40px;
+  background: #21395F;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.side-menu-close span {
+  height: 2px;
+  width: 20px;
+  background: #fff;
+  position: relative;
+  opacity: 1;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+.side-menu-close span:nth-child(1) {
+  top: -5px;
+}
+
+.side-menu-close span:nth-child(3) {
+  bottom: -5px;
+}
+
+.side-menu-close.closed span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  -webkit-transform: translateY(7px) rotate(45deg);
+  -moz-transform: translateY(7px) rotate(45deg);
+  -ms-transform: translateY(7px) rotate(45deg);
+  -o-transform: translateY(7px) rotate(45deg);
+}
+
+.side-menu-close.closed span:nth-child(2) {
+  opacity: 0;
+}
+
+.side-menu-close.closed span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  -webkit-transform: translateY(-7px) rotate(-45deg);
+  -moz-transform: translateY(-7px) rotate(-45deg);
+  -ms-transform: translateY(-7px) rotate(-45deg);
+  -o-transform: translateY(-7px) rotate(-45deg);
+}
+
+/*  custom overlay */
+.custom-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .4);
+  z-index: 12500;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+
+.custom-overlay.show {
+  visibility: visible;
+  opacity: 1;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+  </head>
+  <body translate="no" >
+    <header class="px-2 py-3 py-lg-0 px-sm-0" style="background-color: #FF7F50;">
+     <div class="container">
+       <div class="row align-items-center justify-content-between">
+         <!-- <imgsrc=""alt=""> -->
+         <div class="brand">
+           <img width="100px" height="100px"src="汪2.png">
+           <img width="100px" height="100px"src="汪1.png">
+           <!-- <a href="#" title="Site Logo" class="header-logo d-block">
+             公务汪
+           </a> -->
+         </div>
+         <nav class="d-none d-lg-block" style="background-color: #FF7F50;">
+           <ul class="main-menu d-flex flex-column flex-lg-row align-items-lg-center list-unstyled p-0 m-0">
+             <li class="active">
+               <a href="javascript:void(0)" class="d-block" title="Home">
+                 <span>首页</span>
+               </a>
+             </li>
+             <li>
+               <a href="../introduce/introduce_junjingquan.html" class="d-block" title="Services">
+                 <span>汪汪百科</span>
+               </a>
+               <!--zhushi>
+               <ul class="sub-menu list-unstyled p-0 m-0">
+                 <li>
+                   <a href="#" class="d-block" title="SERVICE 1">
+                     <span>军警汪</span>
+                   </a>
+                 </li>
+               </ul>
+               <ul class="sub-menu list-unstyled p-0 m-0" >
+                 <li>
+                   <a href="#" class="d-block" title="SERVICE 2">
+                     <span>搜救汪</span>
+                   </a>
+                 </li>
+               </ul>
+               <ul class="sub-menu list-unstyled p-0 m-0">
+                 <li>
+                   <a href="#" class="d-block" title="SERVICE 3">
+                     <span>服务汪</span>
+                   </a>
+                 </li>
+               </ul>
+               <!zhushi-->
+             </li>
+             <li>
+               <a href="#" class="d-block" title="About">
+                 <span>汪汪趣闻</span>
+               </a>
+             </li>
+             <li>
+               <a href="../officaldoggame/indexgame1.html" class="d-block" title="Blog">
+                 <span>汪汪乐园</span>
+               </a>
+             </li>
+             <li>
+               <a href="#" class="d-block" title="Contact">
+                 <span>汪汪考场</span>
+               </a>
+             </li>
+             <li>
+               <a href="#" class="d-block" title="call">
+                 <span>汪汪之家</span>
+               </a>
+             </li>
+           </ul>
+
+
+         </nav>
+         <!-- <div id="call-action" class="d-none d-lg-flex align-items-center">
+           <a href="#" title="Call Now" class="d-none d-lg-inline-block call-action">汪汪之家</a>
+         </div> -->
+         <div
+           class="side-menu-close d-flex d-lg-none flex-wrap flex-column align-items-center justify-content-center ml-auto">
+           <span></span>
+           <span></span>
+           <span></span>
+         </div>
+       </div>
+     </div>
+   </header>
+
+
+
+<!-- side menu start -->
+   <div class="side-menu-wrap">
+     <a href="#" title="Site Logo" class="side-menu-logo d-block py-3">
+       公务汪
+     </a>
+     <nav class="side-menu-nav">
+       <!-- auto generated side menu from top header menu -->
+     </nav>
+     <div class="side-menu-close d-flex flex-wrap flex-column align-items-center justify-content-center">
+       <span></span>
+       <span></span>
+       <span></span>
+     </div>
+   </div>
+   <!-- side menu end -->
+   <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+     <script id="rendered-js" >
+// auto generated side menu from top header menu start
+var topHeaderMenu = $('header nav > ul').clone();
+var sideMenu = $('.side-menu-wrap nav');
+sideMenu.append(topHeaderMenu);
+if ($(sideMenu).find('.sub-menu').length != 0) {
+ $(sideMenu).find('.sub-menu').parent().append('<i class="fas fa-chevron-right d-flex align-items-center"></i>');
+}
+// auto generated side menu from top header menu end
+
+// close menu when clicked on menu link start
+// $('.side-menu-wrap nav > ul > li > a').on('click', function () {
+//   sideMenuCloseAction();
+// });
+// close menu when clicked on menu link end
+
+// open close sub menu of side menu start
+var sideMenuList = $('.side-menu-wrap nav > ul > li > i');
+$(sideMenuList).on('click', function () {
+ if (!$(this).siblings('.sub-menu').hasClass('d-block')) {
+   $(this).siblings('.sub-menu').addClass('d-block');
+ } else {
+   $(this).siblings('.sub-menu').removeClass('d-block');
+ }
+});
+// open close sub menu of side menu end
+
+// side menu close start
+$('.side-menu-close').on('click', function () {
+ if (!$('.side-menu-close').hasClass('closed')) {
+   $('.side-menu-close').addClass('closed');
+ } else {
+   $('.side-menu-close').removeClass('closed');
+ }
+});
+// side menu close end
+
+// auto append overlay to body start
+$('.wrapper').append('<div class="custom-overlay h-100 w-100"></div>');
+// auto append overlay to body end
+
+// open side menu when clicked on menu button start
+$('.side-menu-close').on('click', function () {
+ if (!$('.side-menu-wrap').hasClass('opened') && !$('.custom-overlay').hasClass('show')) {
+   $('.side-menu-wrap').addClass('opened');
+   $('.custom-overlay').addClass('show');
+ } else {
+   $('.side-menu-wrap').removeClass('opened');
+   $('.custom-overlay').removeClass('show');
+ }
+});
+// open side menu when clicked on menu button end
+
+// close side menu when clicked on overlay start
+$('.custom-overlay').on('click', function () {
+ sideMenuCloseAction();
+});
+// close side menu when clicked on overlay end
+
+// close side menu when swiped start
+var isDragging = false,initialOffset = 0,finalOffset = 0;
+$(".side-menu-wrap").
+mousedown(function (e) {
+ isDragging = false;
+ initialOffset = e.offsetX;
+}).
+mousemove(function () {
+ isDragging = true;
+}).
+mouseup(function (e) {
+ var wasDragging = isDragging;
+ isDragging = false;
+ finalOffset = e.offsetX;
+ if (wasDragging) {
+   if (initialOffset > finalOffset) {
+     sideMenuCloseAction();
+   }
+ }
+});
+// close side menu when swiped end
+
+
+function sideMenuCloseAction() {
+ $('.side-menu-wrap').addClass('open');
+ $('.wrapper').addClass('freeze');
+ $('.custom-overlay').removeClass('show');
+ $('.side-menu-wrap').removeClass('opened');
+ $('.side-menu-close').removeClass('closed');
+ $(sideMenuList).siblings('.sub-menu').removeClass('d-block');
+}
+// close side menu when clicked on overlay end
+
+// close side menu over 992px start
+$(window).on('resize', function () {
+ if ($(window).width() >= 992) {
+   sideMenuCloseAction();
+ }
+});
+// close side menu over 992px end
+//# sourceURL=pen.js
+   </script>
+
+    <div class="wrapper"></div>
+      <!--字-->
+      <a>&#12288</a>
+      <div class="banner-char-container">
+        <div class="char-box">
+          <span class="char-left" style="--banner-char-size:3rem;">
+            <span class="char">用 领 养&#12288&#12288</span>
+          </span>
+        </div>
+        <div class="char-box">
+            <span class="char-right" style="--banner-char-size:2rem;">
+              <span class="char">&#12288&#12288代 替 买 卖</span>
+            </span>
+        </div>
+      </div>
+
+      <!--第一段-->
+
+      <div class="yun-card post-card" m="y-4 auto">
+        <!--第一段框1-->
+        <div class="flex flex-1 of-hidden justify-start items-start post-card-info" w="full">
+          <div class="flex flex-col flex-1 items-center" w="full">
+            <!--标题-->
+            <div class="search widget">
+                        <form action="" method="get" class="searchform" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="查找...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"> <i class="ion-search"></i> </button>
+                                </span>
+                                </div><!-- /input-group -->
+                            </form>
+                        </div>
+            <a href="/posts/home-firework-red-bag" class="post-title-link cursor-pointer" m="t-3">
+              <div class="flex-center title text-2xl" text="center" font="serif black">甜蜜守护天使——小灰👧</div>
+            </a>
+            <!--细节信息-->
+            <div class="post-meta" flex="~ col" justify="center" items="center" text="sm" py="1">
+              <div class="post-time flex items-center">
+                <span class="inline-flex-center">
+                  <div class="inline-block" i-ri-calendar-line=""></div>
+                  <time m="l-1">2023-06-10更新&#12288🎐北京市  ⭐32</time>
+              </div>
+            </div>
+            <!--正文-->
+            <div class="markdown-body" text="left" w="full" p="x-6 lt-sm:4 y-1">
+              <a href="" target="_blank">
+                <img src="https://i0.hdslb.com/bfs/new_dyn/940729217e612b76c231859804b1fb9a1423359401.png@1048w_!web-dynamic.webp" style="box-shadow: none;" alt="upyun">
+              </a>
+              <h2>了解小灰</h2>
+              <time m="l-1" style="color: blue;font-family:华文中宋;">💉未免疫</time>
+              <time m="l-1" style="color: red;font-family:华文中宋;">&#12288&#12288&#12288❤️‍🩹未绝育</time>
+              <time m="l-1" style="color: green;font-family:华文中宋;">&#12288&#12288&#12288🦠已驱虫</time>
+              <time m="l-1" style="color: purple;font-family:华文中宋;">&#12288&#12288&#12288🪙免费</time>
+              <blockquote>
+                <p>很乖很听话，已经做过全身体检，身体健康，没有犬瘟细小冠状，寻找爱心人士领养。
+              </blockquote>
+              <p><code>√仅限同城&#12288√遛狗栓绳，养猫封网&#12288√科学养宠，办理狗证&#12288√全家同意&#12288√有稳定收入&#12288√不得遗弃、转让、贩卖、繁殖、虐待</code></p>
+              <div class="post-comment">
+                                  <h5>写评论</h5>
+                                  <form role="form" class="form-horizontal">
+                                      <div class="form-group">
+                                          <div class="col-lg-12">
+                                              <textarea class=" form-control" rows="8" placeholder="请输入"></textarea>
+                                          </div>
+                                      </div>
+                                      <p>
+                                      </p>
+                                      <p></p>
+                                  </form>
+                              </div>
+            </div>
+            <div m="b-5">
+              <a href="" class="post-link-btn shadow hover:shadow-md" rounded="" target="_blank" m="b-4">发布</a>
+            </div>
+          </div>
+        </div>
+        <!--第一段框2-->
+        <div w="full" class="yun-card-actions flex justify-between" border="t" text="sm">
+            <div class="post-categories inline-flex" flex="wrap 1">
+              <div m="x-1" inline-flex="" i-ri-folder-2-line=""></div>
+              <span>如对方向您索要运费等，切勿付款！请务必<strong>联系审核员</strong>核实，以免被骗</span>
+            </div>
+            <div class="post-tags inline-flex" flex="wrap 1" justify="end" m="1">
+              <div m="r-1" i-ri-price-tag-3-line=""></div>
+              <span>⚠️举报</span>
+            </div>
+        </div>
+      </div>
+
+      <!--第二段-->
+
+      <div class="yun-card post-card" m="y-4 auto">
+        <!--第一段框1-->
+        <div class="flex flex-1 of-hidden justify-start items-start post-card-info" w="full">
+          <div class="flex flex-col flex-1 items-center" w="full">
+            <!--标题-->
+            <a href="/posts/home-firework-red-bag" class="post-title-link cursor-pointer" m="t-3">
+              <div class="flex-center title text-2xl" text="center" font="serif black">浑身是胆的小勇士——金虎👦</div>
+            </a>
+            <!--细节信息-->
+            <div class="post-meta" flex="~ col" justify="center" items="center" text="sm" py="1">
+              <div class="post-time flex items-center">
+                <span class="inline-flex-center">
+                  <div class="inline-block" i-ri-calendar-line=""></div>
+                  <time m="l-1">2023-06-04更新&#12288🎐天津市  ⭐67</time>
+              </div>
+            </div>
+            <!--正文-->
+            <div class="markdown-body" text="left" w="full" p="x-6 lt-sm:4 y-1">
+              <a href="" target="_blank">
+                <img src="https://i0.hdslb.com/bfs/new_dyn/52b5f1ee211e0aee0a4cd088e12e01701423359401.jpg@1048w_!web-dynamic.webp" style="box-shadow: none;" alt="upyun">
+              </a>
+              <h2>了解金虎</h2>
+              <time m="l-1" style="color: blue;font-family:华文中宋;">💉已免疫</time>
+              <time m="l-1" style="color: red;font-family:华文中宋;">&#12288&#12288&#12288❤️‍🩹已绝育</time>
+              <time m="l-1" style="color: green;font-family:华文中宋;">&#12288&#12288&#12288🦠已驱虫</time>
+              <time m="l-1" style="color: purple;font-family:华文中宋;">&#12288&#12288&#12288🪙免费</time>
+              <blockquote>
+                <p>给毛孩子找个家 金虎（铁包金色），小型西藏牧羊犬（中等泰迪大小），男孩，三岁（已做绝育）。聪明，健康，活泼，亲人。的富养家庭，要求不离不弃，吃狗粮，能进屋，要签领养协议。
+              </blockquote>
+              <p><code>√仅限同城&#12288√遛狗栓绳，养猫封网&#12288√科学养宠，办理狗证&#12288√全家同意&#12288√有稳定收入&#12288√不得遗弃、转让、贩卖、繁殖、虐待</code></p>
+              <div class="post-comment">
+                                  <h5>写评论</h5>
+                                  <form role="form" class="form-horizontal">
+                                      <div class="form-group">
+                                          <div class="col-lg-12">
+                                              <textarea class=" form-control" rows="8" placeholder="请输入"></textarea>
+                                          </div>
+                                      </div>
+                                      <p>
+                                      </p>
+                                      <p></p>
+                                  </form>
+                              </div>
+            </div>
+            <div m="b-5">
+              <a href="" class="post-link-btn shadow hover:shadow-md" rounded="" target="_blank" m="b-4">发布</a>
+            </div>
+          </div>
+        </div>
+        <!--第一段框2-->
+        <div w="full" class="yun-card-actions flex justify-between" border="t" text="sm">
+            <div class="post-categories inline-flex" flex="wrap 1">
+              <div m="x-1" inline-flex="" i-ri-folder-2-line=""></div>
+              <span>如对方向您索要运费等，切勿付款！请务必<strong>联系审核员</strong>核实，以免被骗</span>
+            </div>
+            <div class="post-tags inline-flex" flex="wrap 1" justify="end" m="1">
+              <div m="r-1" i-ri-price-tag-3-line=""></div>
+              <span>⚠️举报</span>
+            </div>
+        </div>
+      </div>
+
+      <!--第三段-->
+
+      <div class="yun-card post-card" m="y-4 auto">
+        <!--第一段框1-->
+        <div class="flex flex-1 of-hidden justify-start items-start post-card-info" w="full">
+          <div class="flex flex-col flex-1 items-center" w="full">
+            <!--标题-->
+            <a href="/posts/home-firework-red-bag" class="post-title-link cursor-pointer" m="t-3">
+              <div class="flex-center title text-2xl" text="center" font="serif black">温顺小可爱——三宝👦</div>
+            </a>
+            <!--细节信息-->
+            <div class="post-meta" flex="~ col" justify="center" items="center" text="sm" py="1">
+              <div class="post-time flex items-center">
+                <span class="inline-flex-center">
+                  <div class="inline-block" i-ri-calendar-line=""></div>
+                  <time m="l-1">2023-05-29更新&#12288🎐北京市  ⭐159</time>
+              </div>
+            </div>
+            <!--正文-->
+            <div class="markdown-body" text="left" w="full" p="x-6 lt-sm:4 y-1">
+              <a href="" target="_blank">
+                <img src="https://i0.hdslb.com/bfs/new_dyn/71b998a9efa450af2e8bb8886a19f3631423359401.jpg@1048w_!web-dynamic.webp" style="box-shadow: none;" alt="upyun">
+              </a>
+              <h2>了解三宝</h2>
+              <time m="l-1" style="color: blue;font-family:华文中宋;">💉已免疫</time>
+              <time m="l-1" style="color: red;font-family:华文中宋;">&#12288&#12288&#12288❤️‍🩹已绝育</time>
+              <time m="l-1" style="color: green;font-family:华文中宋;">&#12288&#12288&#12288🦠已驱虫</time>
+              <time m="l-1" style="color: purple;font-family:华文中宋;">&#12288&#12288&#12288🪙免费</time>
+              <blockquote>
+                <p>田园犬，黑白花，特别干净漂亮，性格温和腼腆，安静不叫唤，胃口好，亲人，会用尿垫，适合年轻人领养。
+              </blockquote>
+              <p><code>√仅限同城&#12288√遛狗栓绳，养猫封网&#12288√科学养宠，办理狗证&#12288√全家同意&#12288√有稳定收入&#12288√不得遗弃、转让、贩卖、繁殖、虐待</code></p>
+              <div class="post-comment">
+                                  <h5>写评论</h5>
+                                  <form role="form" class="form-horizontal">
+                                      <div class="form-group">
+                                          <div class="col-lg-12">
+                                              <textarea class=" form-control" rows="8" placeholder="请输入"></textarea>
+                                          </div>
+                                      </div>
+                                      <p>
+                                      </p>
+                                      <p></p>
+                                  </form>
+                              </div>
+            </div>
+            <div m="b-5">
+              <a href="" class="post-link-btn shadow hover:shadow-md" rounded="" target="_blank" m="b-4">发布</a>
+            </div>
+          </div>
+        </div>
+        <!--第一段框2-->
+        <div w="full" class="yun-card-actions flex justify-between" border="t" text="sm">
+            <div class="post-categories inline-flex" flex="wrap 1">
+              <div m="x-1" inline-flex="" i-ri-folder-2-line=""></div>
+              <span>如对方向您索要运费等，切勿付款！请务必<strong>联系审核员</strong>核实，以免被骗</span>
+            </div>
+            <div class="post-tags inline-flex" flex="wrap 1" justify="end" m="1">
+              <div m="r-1" i-ri-price-tag-3-line=""></div>
+              <span>⚠️举报</span>
+            </div>
+        </div>
+      </div>
+      <a>&#12288</a>
+      <div class="flex flex-1 of-hidden justify-start items-start post-card-info" w="full">
+        <div class="flex flex-col flex-1 items-center" w="full">
+          <nav class="pagination"><!--v-if-->
+            <a aria-current="page" href="/" class="router-link-active router-link-exact-active page-number active">1</a>
+            <a href="/page/2" class="page-number">&#12288 2</a><a href="/page/3" class="page-number">&#12288 3</a>
+            <span class="space" disabled="">&#12288 ... </span><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if--><!--v-if-->
+            <a href="/page/12" class="page-number">&#12288 12</a><a href="/page/2" class="page-number" aria-label="next">
+              <div i-ri-arrow-right-s-line=""></div>
+            </a>
+          </nav>
+        </div>
+      </div>
+      <a>&#12288</a>
+    <div class="contact-form">
+      <iframe class="airtable-embed" src="https://airtable.com/embed/shrhQxdYwP1aL96nu?" frameborder="0" onmousewheel="" width="100%" height="500" style="background: transparent; border: 1px solid #ccc;"></iframe>
+    </div>
+
+
+    <!--footer-->
+    <footer class="va-footer p-4 text-$va-c-text-light" text="center sm">
+      <!--第一行-->
+      <div class="beian" m="y-2">
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">欢迎来到公务汪</a>
+      </div>
+      <!--第二行-->
+      <div class="copyright flex justify-center items-center gap-2" p="1">
+        <span>给公务汪一个家</span>
+        <!--探究一下原理-->
+        <a class="inline-flex animate-pulse" href="https://sponsors.yunyoujun.cn" target="_blank" title="Sponsor YunYouJun">
+          <div class="i-ri-cloud-line"></div>
+        </a>
+        <span>欢迎领养</span>
+      </div>
+      <!--第三行-->
+      <div class="powered" m="2">
+        <span>感谢
+          <a href="https://github.com/YunYouJun/valaxy" target="_blank" rel="noopener">唐雪彤老师</a>
+          创意交互设计与技术
+        </span>
+        |
+        <span>作者 -
+          <a href="https://github.com/YunYouJun/valaxy/tree/main/packages/valaxy-theme-yun" title="valaxy-theme-yun" target="_blank">善舞扬舟</a>
+          ---李姝庆 武浩毓 刘越 韩雨萌 熊呈瑞 郭勇
+        </span>
+      </div>
+    </footer>
+  </body>

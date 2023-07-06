@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- 音乐播放器 背景 -->
+  <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+      <meta name="apple-mobile-web-app-title" content="CodePen">
+      <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+      <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+    <title>公务汪-兴趣故事</title>
+     <!-- 音乐播放器 -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto&amp;display=swap'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+   <link rel="stylesheet" href="story.css">
+    <!-- 展示图互动 -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+   <script>
+   window.console = window.console || function(t) {};
+ </script>
+  </head>
+
+  <body translate="no">
+  <div class="wrapper_"></div>
+  <!-- 导航 -->
+  <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #FF7F50;">
+   <div class="container-fluid">
+     <a class="navbar-brand" href="#">
+       <img src="pic/公务汪logo.png" width="155" height="57">
+     </a>
+     <a class="navbar-brand" href="#">
+        <img src="pic/navbarlogo.png" width="155" height="57">
+      </a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+       <ul class="navbar-nav mb-2 mb-lg-0">
+         <li class="nav-item">
+           <a class="nav-link active" aria-current="page" href="#">
+             <span class="fw-bold fs-6 text-white">首页</span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">
+             <span class="fw-bold fs-6 text-white">汪汪百科</span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">
+             <span class="fw-bold fs-6 text-white">汪汪故事</span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">
+             <span class="fw-bold fs-6 text-white">汪汪考场</span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">
+             <span class="fw-bold fs-6 text-white">汪汪乐园</span>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">
+             <span class="fw-bold fs-6 text-white">汪汪之家</span>
+           </a>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </nav>
+ <br>
+ <br>
+ <br>
+    <!-- 标题 -->
+       <h1>一条狗的使命</h1>
+       <p>"Have fun, obviously. Whenever possible, find someone to save, and save them.</p>
+       <p>Just be here now. Go! That's a dog's purpose."</p>
+       <!-- 个例展示图 -->
+       <section class="main">
+         <div class="wrap wrap--1">
+           <div class="container container--1">
+           </div>
+         </div>
+
+         <div class="wrap wrap--2">
+           <div class="container container--2">
+           </div>
+         </div>
+
+         <div class="wrap wrap--3">
+           <div class="container container--3">
+           </div>
+         </div>
+       </section>
+       <!-- 视频跳转链接 -->
+        <!-- 个例详情介绍页 -->
+        <br>
+          <div class="container_2">
+          <div class="row justify-content-md-center">
+          <div class="col col-lg-3" id="accordionExample">
+               <a class="body_a1" href="https://haokan.baidu.com/v?vid=9975924078964446715">查看视频</a>
+               <br>
+                  <div class="accordion-item" style="background-color:transparent;">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" style="background-color:transparent;color: #8B4513;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" >
+                        -折翼天使 巴顿-
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body text-start">
+                        你好！我是巴顿！一只用三条腿奔跑的警犬~
+                        <br><br>
+                        我出生于淅川特警队，父母都是警队中优秀的警犬，不出意外的话，我原本会继承父母的衣钵，继续成为一名优秀的警犬，然而尽管我出生时个头最大，资质最好，但却因为左前腿先天残疾，不具备警用品质。
+                        在医生的诊断下，我一度差点被安乐死，但警队的特警哥哥们不忍心看到我就这样离去，为我安排了领养家庭，可我不甘心做一只普通的家养犬，在经历了重重困难后我成功重返警队。<br>
+                        但似乎所有人都不相信我的实力，看着兄弟姐妹们接受着严格的训练，我露出羡慕的神情，渴望训导员能给我一个机会。皇天不负有心犬，在训导员的努力之下，我逐渐适应警队的训练，性格也慢慢变得温和坚毅。
+                        但光有一颗想当警犬的心还远远不够，我的速度总是相对落后，也常常重心不稳，在训练和实战中摔倒负伤对我来说已经司空见惯，我也早已习惯在跌倒后重新爬起来战斗。<br>
+                        为了让我的晚年生活质量好一点，训导员提前帮我适应假肢辅助前行，虽然很辛苦但我感到十分幸福，因为这都是警队家人们对我的爱。<br>
+                        希望我的故事能给你开始一切的勇气，我是巴顿~
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-lg-3" id="accordionExample">
+                  <a class="body_a2" href="https://haokan.baidu.com/v?vid=13419004851199563694">查看视频</a>
+                  <br>
+                  <div class="accordion-item" style="background-color:transparent;">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" style="background-color:transparent;color: #8B4513;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        -半面英雄 闪电-
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                      <div class="accordion-body text-start">
+                        你好！我是闪电！一只只有半张脸的警犬~ <br><br>
+                        我出生于警犬世家，拥有优良的血统，我的父母都战功累累，是成绩显著的功勋犬。为了追随父母的脚步，我从出生便成为了警犬基地的一员。
+                        经历了从小日复一日的训练，我在基地进行警犬考核时，各项指标都达到了优级，甚至其中几项还突破了警犬学校的记录。至此我正式从警犬学校毕业，成为一名光荣的警犬。
+                        在警局服役期间，我参与过多起缉毒案件，凭借灵敏的嗅觉和勇猛的战斗精神迅速制服毒贩，除此之外，我也很擅长搜寻嫌疑人。<br>
+                        但是危险和意外总在不经意间发生，一次行动中，我为了解救被拐儿童，与人贩子殊死搏斗，被铁锹砍掉了半张脸，造成了严重的额骨损伤，但我仍没有松口，最终解救了十五名被拐儿童。在经历了十几个小时的手术之后我幸存了下来。
+                        然而失去了半张脸，我很难张开口去吃饭，医生拔掉了我的部分牙齿，我才能够顺利进食。在医治和修复的时间里，我伤心过、痛苦过，但始终没有绝望，因为我知道有很多人在爱着我，在积极地帮助我。<br>
+                        希望我的故事能给你坚持一切的力量，我是闪电~
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="col col-lg-3" id="accordionExample">
+                      <a class="body_a3" href="https://haokan.baidu.com/v?vid=8879644233596732036">查看视频</a>
+                      <br>
+                    <div class="accordion-item" style="background-color:transparent;">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" style="background-color:transparent;color: #8B4513;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                          -忘我斗士 沈虎-
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-start">
+                          你好！我是沈虎！是一只与时间赛跑的搜救犬~<br><br>
+                          我从小在沈阳警犬基地长大，十个月的时候就被分配到南京消防支队上岗工作，成为一名光荣的搜救犬。其实我还有一个可爱的小名叫小黑，是我的训导员给我起的。<br>
+                          八级大地震的天灾席卷着无数生灵，那时候我刚成年没多久，凭借优秀的过往救援成绩、充沛的体力和敏锐的嗅觉成功加入了南京救援组，跟随训导员第一时间赶往灾区参与救援，
+                          为了发现更多的生命痕迹，我在坍塌的废墟中不断奔跑、定位，裸露的钢筋砂石不时划破我的腹部和后腿，可我全部身心都在争分夺秒地跟死神赛跑。
+                          在长达十四天的救援中，我成功解救了十五名深埋在废墟底下的受伤群众。由于吸入巨量粉尘，加上巨大的运动量和缺水导致了尿结石和呼吸困难等疾病，被钢筋、瓦片划得遍体鳞伤，我直接暴瘦十几斤，休养了好几年才慢慢恢复健康。<br>
+                          两年后我有了新的战友，也是他给我起了沈虎这个名字，我们不仅多次完成上级分配的救援任务，更是在南京支队几次军犬比赛中斩获多个奖项。<br>
+                          希望我的故事能给你相信一切的真心，我是沈虎~
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+          <!-- 标题 2-->
+          <br>
+          <br>
+          <br>
+            <h1>告诉世界我来过</h1>
+            <p>"The distance between life and death, for a dog, it cannot fathom.</p>
+            <p>It’s life as a water passage, one point one year after year in bluestone station." </p>
+            <br>
+            <div style="text-align:right">
+          <h6>轻触小狗有惊喜！</h6>
+          <br>
+          </div>
+            <section id="timeline" class="p-5 overflow-scroll" style="margin-bottom:5em;">
+            		<div id="timeline-grid">
+            			<div class="img-container">
+            				<img class="primary" src="pic/伯爵1.png" />
+            				<img class="secondary" src="pic/伯爵2.png" />
+            			</div>
+            			<div class="img-container">
+            				<img class="primary" src="pic/王子1.png" />
+            				<img class="secondary" src="pic/王子2.png" />
+            			</div>
+            			<div class="img-container">
+            				<img class="primary" src="pic/可乐1.png" />
+            				<img class="secondary" src="pic/可乐2.png" />
+            			</div>
+            			<div class="img-container">
+            				<img class="primary" src="pic/露娜1.png" />
+            				<img class="secondary" src="pic/露娜2.png" />
+            			</div>
+            			<div class="img-container">
+            				<img class="primary" src="pic/西蒙1.png" />
+            				<img class="secondary" src="pic/西蒙2.png" />
+            			</div>
+            			<div class="img-container">
+            				<img class="primary" src="pic/饼干1.png" />
+            				<img class="secondary" src="pic/饼干2.png" />
+            			</div>
+            			<div class="img-container">
+            				<img class="primary" src="pic/大硕1.png" />
+            				<img class="secondary" src="pic/大硕2.png" />
+            			</div>
+            			<div class="img-container">
+            				<img class="primary" src="pic/问号.png" />
+            				<img class="secondary" src="pic/狗剪影.png" />
+            			</div>
+            			<span class="timeline-font">伯爵</span>
+            			<span class="timeline-font">王子</span>
+            			<span class="timeline-font">可乐</span>
+            			<span class="timeline-font">露娜</span>
+            			<span class="timeline-font">西蒙</span>
+            			<span class="timeline-font">饼干</span>
+            			<span class="timeline-font">大硕</span>
+            			<span class="timeline-font">XXX</span>
+            			<div class="ball"></div>
+            			<div class="ball"></div>
+            			<div class="ball"></div>
+            			<div class="ball"></div>
+            			<div class="ball"></div>
+            			<div class="ball"></div>
+            			<div class="ball"></div>
+            			<div class="ball"></div>
+            			<span class="timeline-font small">史宾格</span>
+            			<span class="timeline-font small">马犬</span>
+            			<span class="timeline-font small">德牧</span>
+            			<span class="timeline-font small">史宾格</span>
+            			<span class="timeline-font small">德牧</span>
+            			<span class="timeline-font small">罗威纳</span>
+            			<span class="timeline-font small">拉布拉多</span>
+            			<span class="timeline-font small">你还知道哪些？</span>
+            			<span class="timeline-font">搜爆犬</span>
+            			<span class="timeline-font">护卫犬</span>
+            			<span class="timeline-font">护卫犬</span>
+            			<span class="timeline-font">搜爆犬</span>
+            			<span class="timeline-font">护卫犬</span>
+            			<span class="timeline-font">护卫犬</span>
+            			<span class="timeline-font">护卫犬</span>
+            			<span class="timeline-font">勇敢可爱的公务汪</span>
+            		</div>
+            	</section>
+                <div style="text-align:right">
+              <h6>素材来源：madouzi</h6>
+              </div>
+          <!-- 标题 3-->
+          <br>
+          <br>
+          <br>
+            <h1>一千零一只</h1>
+            <p>"As a dog, it has its principles, never abandon, regardless of sickness and death.</p>
+            <p>Waiting for the silent witness to their most sincere, the most pure love, also deeply touched by people."</p>
+            <br>
+            <div class="container_3">
+              <div class="row">
+                  <div class="col">
+                      <div class="wrapper zoom">
+                          <div class="profile" id="profile1">
+                              <div class="overlay">
+                                  <div class="about d-flex flex-column">
+                                      <h2>忠犬</h2>
+                                      <h4>2022-02-18    美国</h4>
+                                      <span class="p-3">剧情讲述美国陆军游骑兵布里格(查宁·塔图姆 饰)的任务是将比利时牧羊军犬露露从路易斯–麦克乔德联合基地沿太平洋海岸及时带到亚利桑那州诺加里斯，以便及时参加露露训导员的葬礼，一路上人狗间培养出了深刻的友谊。</span>
+                                    </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="wrapper zoom">
+                          <div class="profile" id="profile2">
+                              <div class="overlay">
+                                  <div class="about d-flex flex-column">
+                                      <h2>野性的呼唤</h2>
+                                      <h4>1935-08-09    美国</h4>
+                                      <span class="p-3">养尊处优的巴克被卖到了严寒的阿拉斯加，成为了雪橇犬，它辗转经历了好几个残暴冷酷的主人后，遇到了约翰（克拉克·盖博饰），约翰治好了它伤痕累累的身体，
+                                        一人一狗之间产生了坚实的友谊。然而在一场意外中，约翰被印第安人杀死了，愤怒的巴克失去了理智，它要为自己的主人报仇。</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="wrapper zoom">
+                          <div class="profile" id="profile3">
+                              <div class="overlay">
+                                  <div class="about d-flex flex-column">
+                                      <h2>义犬救主</h2>
+                                      <h4>2022-03-17    美国</h4>
+                                      <span class="p-3">州警察丹（格兰特·古斯汀饰）梦想加入K-9搜救队，却苦于得不到机会。收容所犬露比梦想有一个家，却看不到希望。当命运让丹和露比相遇，一人一犬之间的深厚羁绊将帮助这对搭档应对迄今为止最艰巨的挑战。根据真实故事改编。</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="container_4">
+            <div class="row">
+                <div class="col">
+                    <div class="wrapper zoom">
+                        <div class="profile" id="profile4">
+                            <div class="overlay">
+                                <div class="about d-flex flex-column">
+                                    <h2>导盲犬小Q</h2>
+                                    <h4>2004-03-13    日本</h4>
+                                    <span class="p-3">一只可爱的拉布拉多犬被选去接受导盲犬的培训，并寄养在一对夫妇的家里。训练十分艰苦，但小Q还是成为了导盲犬，
+                                      认识了第一位主人渡边先生，不久渡边先生病倒了，小Q只好回到了训练中心。小Q已经在训练中心度过了7年，这时它又能回到了“养父母”的家了，可是它却患病了……</span>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="wrapper zoom">
+                        <div class="profile" id="profile5">
+                            <div class="overlay">
+                                <div class="about d-flex flex-column">
+                                    <h2>消防犬</h2>
+                                    <h4>2007-04-04    美国</h4>
+                                    <span class="p-3">小狗雷克斯是一条家喻户晓的明星犬，在一次拍摄中雷克斯不慎从几千米的高空坠落，而它的同伴都认为它必死无疑。事实上，雷克斯幸运地落在一辆拉载番茄的卡车上，几经辗转来到了小男孩谢恩·费伊的家中，
+                                    雷克斯的到来使费伊热闹了几分。不久，雷克斯的才能被人发现，它成为一条名副其实的消防犬。</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="wrapper zoom">
+                        <div class="profile" id="profile6">
+                            <div class="overlay">
+                                <div class="about d-flex flex-column">
+                                    <h2>多哥</h2>
+                                    <h4>2019-12-20    美国</h4>
+                                    <span class="p-3">诺姆市爆发白喉，由于疫苗在港口关闭前未能送达，卫生局决定使用两组雪橇犬接力运输，经过河流，跨过平原，穿过森林，穿越冰冻的阿拉斯加邮路。
+                                      最近的疫苗所在地为南纳，距离诺姆市1085公里，一般情况下狗拉雪橇需要费时25日，而他们只花了5天半就成功完成接力，拯救了多名孩子的性命。</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_5">
+          <div class="row">
+              <div class="col">
+                  <div class="wrapper zoom">
+                      <div class="profile" id="profile7">
+                          <div class="overlay">
+                              <div class="about d-flex flex-column">
+                                  <h2>战犬瑞克斯</h2>
+                                  <h4>2017-06-09    美国</h4>
+                                  <span class="p-3">改编自真人真事，以伊拉克战争为背景，讲诉海军陆战队下士梅根·利维和她的军犬瑞克斯一起拯救了多人生命的故事。在经历生死与相互救赎后，一人一犬建立深厚情感的故事。
+                                  该片首次全面展现军犬在战区排爆、救人的惊心动魄的画面，真实刻画了女兵梅根·利维与军犬瑞克斯在战场上紧张、勇猛的状态。</span>
+                                </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="wrapper zoom">
+                      <div class="profile" id="profile8">
+                          <div class="overlay">
+                              <div class="about d-flex flex-column">
+                                  <h2>灵犬莱西</h2>
+                                  <h4>1943-10-07    美国</h4>
+                                  <span class="p-3">英国约克郡，大萧条时期。山姆·盖克劳（唐纳德·克里斯普饰）一家家境贫困，唯一值钱的东西只有一条聪明的牧羊犬莱西。莱西是小儿子乔的好伙伴，然而迫于生计山姆还是将莱西卖给了富有的公爵，深深思念主人的莱西几次出逃。在遥远的苏格兰，莱西开始了返回真正主人之家的旅程。</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col">
+                  <div class="wrapper zoom">
+                      <div class="profile" id="profile9">
+                          <div class="overlay">
+                              <div class="about d-flex flex-column">
+                                  <h2>雪地黄金犬</h2>
+                                  <h4>1991-01-18    美国</h4>
+                                  <span class="p-3">为了完成父亲的遗愿，杰克（伊桑·霍克饰）只身来到阿拉斯加寻找金矿，一只名叫白牙的阿拉斯加雪橇犬改变了杰克的命运，将他从死亡线上挽救了回来，而当白牙被赌狗的恶棍们当成摇钱树之时，杰克也毫不犹豫的对其伸出援手。
+                                    白牙靠着自己的天赋帮助杰克找到了金矿，当杰克受邀回纽约创业时，面对依依不舍的白牙，杰克犹豫了。</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="container_6">
+        <div class="row">
+            <div class="col">
+                <div class="wrapper zoom">
+                    <div class="profile" id="profile10">
+                        <div class="overlay">
+                            <div class="about d-flex flex-column">
+                                <h2>了不起的它</h2>
+                                <h4>2022-01-10    中国</h4>
+                                <span class="p-3">纪录片第一季与沈阳铁路公安处警犬队深度合作。节目聚焦12只性格迥异，身兼搜爆、巡逻、护卫职责的警犬与训导员们共同成长的温馨故事，解锁警犬的可爱另一面，打造系列生动的“警务汪打工日记”。</span>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="wrapper zoom">
+                    <div class="profile" id="profile11">
+                        <div class="overlay">
+                            <div class="about d-flex flex-column">
+                                <h2>小狗侦探</h2>
+                                <h4>2018-11-05    英国</h4>
+                                <span class="p-3">来认识下打击犯罪世界中的无名英雄!从能够嗅探毒品或爆炸物的西班牙猎狗到可以追踪犯罪嫌疑人的德国牧羊犬,警犬每年在英国帮助解决三十万起犯罪案件。他们的主要武器是鼻子,其敏感度大约是人类的一万倍，这意味着这些警犬十字军可以执行一系列惊人的任务，从而找到毒品、炸弹和枪支的藏身之处，并且用人类最细微的气味来鉴定关键证据。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="wrapper zoom">
+                    <div class="profile" id="profile12">
+                        <div class="overlay">
+                            <div class="about d-flex flex-column">
+                                <h2>离不开你</h2>
+                                <h4>2021-09-16    中国</h4>
+                                <span class="p-3">该片聚焦人与宠物之间的每一次离别，讲述了人与宠物密不可分的故事。当生、老、病、死这些无法避免的生命定律出现，当成长、离家、意外、永别这些对人来说也尤为重要的命运时刻到来，人与宠物伙伴之间的情意显得尤其诚挚、深刻而动人。与此同时，也呈现出人性和社会的复杂丰富，探讨我们如何更好地生活在这个世界上。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          <!-- 标题 4-->
+          <br>
+          <br>
+          <br>
+            <h1>没有汪（忘）</h1>
+            <p>"It's your dog, but you are it's all.</p>
+            <p>They taught me the meaning of loyalty that you should never forget anyone that you loved."</p>
+            <br>
+            <!-- 音乐播放 -->
+                <!-- 歌词展示   -->
+                <br>
+                <div class="container_7">
+                  <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                  <div class="player">
+                         <div class="cover">
+                             <img src="pic/巴顿.jpg" alt="">
+                         </div>
+                         <div class="info">
+                             <div class="title">人类呀 爱我吧</div>
+                             <div class="singer">李盈盈 小蓓蕾组合</div>
+                         </div>
+                         <div class="volume-box">
+                             <span class="volume-down"><i class="material-icons">remove</i></span>
+                             <input type="range" class="volume-range" step="1" value="80" min="0" max="100"
+                                 oninput="music.volume = this.value/100">
+                             <span class="volume-up"><i class="material-icons">add</i></span>
+                         </div>
+                         <div class="btn-box">
+                             <i class="material-icons repeat" onclick="handleRepeat()">repeat</i>
+                             <i class="material-icons favorite active" onclick="handleFavorite()">favorite</i>
+                             <i class="material-icons volume" onclick="handleVolume()">volume_up</i>
+                         </div>
+                         <div class="music-box">
+                             <input type="range" step="1" class="seekbar" value="0" min="0" max="100" oninput="handleSeekBar()">
+                             <audio class="music-element">
+                                 <source src="pic/人类呀爱我吧.mp3" type="audio/mpeg">
+                             </audio>
+                             <span class="current-time">0:0</span><span class="duration">0:0</span>
+                             <span class="play" onclick="handlePlay()">
+                                 <i class="material-icons">play_arrow</i>
+                             </span>
+                         </div>
+                     </div>
+                </div>
+
+                <div class="col-6 col-lg-8 align-self-center p-5" id="lyric">
+                  <h2>人类呀 爱我吧</h2>
+                  <hr class="line text-gray">
+                  <br>
+                  <h5>我们也当过警察 把坏人绳之以法</h5>
+                  <h5>任劳任怨不图报答</h5>
+                  <h5>我们在海关检查 我们也是探险家</h5>
+                  <h5>山高水深不在话下</h5>
+                  <h5>爱让世界变得美好 爱让生命长大</h5>
+                  <h5>爱让世界充满欢笑 让天下是一家</h5>
+                  <h5>人类呀 爱我吧</h5>
+                  <h5>请给我们一个家 我是你最忠诚的朋友啊</h5>
+                  <h5>人类呀 爱我吧</h5>
+                  <h5>虽然我的个子大 我保证我最听话</h5>
+                  <h5>人类呀 爱我吧</h5>
+                  <h5>不要将我们屠杀 没有我你不觉得孤单吗</h5>
+                  <h5>人类呀 爱我吧</h5>
+                  <h5>地球也是我的家 是我们共同的家</h5>
+                  <h5>我是你最忠诚的朋友啊</h5>
+                  </div>
+                </div>
+              </div>
+                  <br>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js'></script>
+    <script src="story.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-
+  ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>公务汪</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-iOxrY0bjs0TRd97/02e2nvQzNYGqoEdpD2sbEq2U7IOV1ZtUcsq9L/nmp1iA1YEq" crossorigin="anonymous"></script>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+        body {
+        background-image: url("background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+
+      .dogbox {
+        width: 300px;
+        height: 400px;
+        margin: 150px auto;
+        position: relative;
+      }
+
+      .dogbox .cutedog {
+        width: 300px;
+        height: 300px;
+      }
+
+      .dogbox .icon {
+        position: absolute;
+        bottom: -60px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .dogbox .icon img {
+        width: 50px;
+        height: 50px;
+        margin-left: 40px;
+      }
+
+      .dogicon {
+        position: absolute;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 50px;
+      }
+
+      .dogicon img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 50px;
+        margin-left: 50px;
+      }
+
+      .playicon {
+         position: absolute;
+         right: 0;
+         top: 50%;
+         transform: translateY(-50%);
+       }
+
+       .playicon img {
+         width: 200px;
+         height: 140px;
+         margin-bottom: 50px;
+       }
+      }
+
+      .transparent-btn {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* 图标默认状态 */
+     .dogicon img {
+       width: 100px;
+       height: 100px;
+       transition: transform 0.2s; /* 添加过渡效果 */
+     }
+
+     /* 鼠标悬停时放大图标 */
+     .dogicon img:hover {
+       transform: scale(1.2); /* 缩放图标为原始尺寸的1.2倍 */
+     }
+
+     /* 图标默认状态 */
+          .playicon img {
+            width: 200px;
+            height: 140px;
+            transition: transform 0.2s; /* 添加过渡效果 */
+          }
+
+          /* 鼠标悬停时放大图标 */
+          .playicon img:hover {
+            transform: scale(1.2); /* 缩放图标为原始尺寸的1.2倍 */
+          }
+
+          /* 图标默认状态 */
+              .dogbox .icon img {
+                 width: 50px;
+                 height: 50px;
+                 transition: transform 0.2s; /* 添加过渡效果 */
+               }
+
+               /* 鼠标悬停时放大图标 */
+               .dogbox .icon img:hover {
+                 transform: scale(1.2); /* 缩放图标为原始尺寸的1.2倍 */
+               }
+
+               /* CSS styles for smaller screens */
+               @media (max-width: 576px) {
+                 .dogicon,
+                 .playicon {
+                   position: static;
+                   transform: none;
+                   margin: 0;
+                   display: flex;
+                   flex-direction: row; /* Added this line */
+                   justify-content: flex-start; /* Changed from center to flex-start */
+                   align-items: center; /* Added this line */
+                 }
+
+                 .dogicon img,
+                 .playicon img {
+                   width: 50%;
+                   height: auto; /* Changed from 20% to auto */
+                 }
+
+                 .dogicon {
+                   align-self: flex-start;
+                 }
+
+                 .playicon {
+                   align-self: flex-end;
+                 }
+               }
+
+    </style>
+
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg" style="background-color: #FF7F50;">
+      <div class="container-fluid custom-width">
+        <a class="navbar-brand" href="#">
+          <img src="公务汪logo.png" width="155" height="57">
+        </a>
+        <a class="navbar-brand" href="#">
+          <img src="navbarlogo.png" width="155" height="57">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                <span class="fw-bold fs-6 text-white">首页</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="fw-bold fs-6 text-white">汪汪百科</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="fw-bold fs-6 text-white">汪汪故事</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="fw-bold fs-6 text-white">汪汪考场</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="fw-bold fs-6 text-white">汪汪乐园</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="fw-bold fs-6 text-white">汪汪之家</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 dogicon">
+          <a href="indexgame1.html">
+            <img src="狗1/icon.png" alt="狗1/坐">
+          </a>
+          <a href="game2.html">
+            <img src="狗2/icon.png" alt="狗2/坐">
+          </a>
+          <a href="game3.html">
+            <img src="狗3/icon.png" alt="狗3/站">
+          </a>
+        </div>
+
+        <div class="col-sm-6 col-md-8 dogbox">
+          <img id="dogImage" class="cutedog" src="狗2/坐.png">
+          <div class="icon">
+            <img id="站" src="buttons/2-1.png" onclick="changeImage('狗2/站.png')">
+            <img id="趴" src="buttons/2-2.png" onclick="changeImage('狗2/走.png')">
+            <img id="跑" src="buttons/2-3.png" onclick="changeImage('狗2/躺.png')">
+          </div>
+        </div>
+        </div>
+
+
+        <div class="col-sm-3 col-md-2 playicon">
+        <div class="d-flex flex-column align-items-center">
+          <button type="button" class="btn transparent-btn" id="liveToastBtn">
+            <img src="buttons/play.png" style="width: 200px; height: 150px;" alt="Play">
+          </button>
+
+          <div class="toast-container position-fixed bottom-0 end-0 p-3 mt-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <img src="buttons/heart.png" style="width: 30px; height: 40px;">
+                <strong class="me-auto">小狗</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                小狗收到了，小狗很喜欢
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <button type="button" class="btn transparent-btn" id="liveToastBtn2">
+            <img src="buttons/eat.png" style="width: 200px; height: 150px;" alt="Eat">
+          </button>
+
+          <div class="toast-container position-fixed bottom-0 end-0 p-3 mt-3">
+            <div id="liveToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+              <div class="toast-header">
+                <img src="buttons/heart.png" style="width: 30px; height: 40px;">
+                <strong class="me-auto">小狗</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
+              <div class="toast-body">
+                小狗收到了，小狗很喜欢
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     <audio id="buttonSound1">
+     <source src="song/happy.mp3" type="audio/mpeg">
+     </audio>
+
+     <audio id="buttonSound2">
+     <source src="song/eat.mp3" type="audio/mpeg">
+     </audio>
+
+    <audio id="backgroundMusic">
+      <source src="song/eat.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      var backgroundMusic = document.getElementById('backgroundMusic');
+      var dogImage = document.getElementById('dogImage');
+      var originalImagePath = dogImage.src;
+
+      function changeImage(imagePath) {
+        // Pause the background music
+        backgroundMusic.pause();
+
+        // Switch to the new image
+        dogImage.src = imagePath;
+
+        // Play the sound effect
+        var soundEffect = new Audio('song/dogwang.mp3');
+        soundEffect.play();
+
+        // Revert back to the original image after 3 seconds
+        setTimeout(function() {
+          dogImage.src = originalImagePath;
+
+          // Resume the background music
+          backgroundMusic.play();
+        }, 3000);
+      }
+
+      // Start playing the background music
+      backgroundMusic.play();
+
+      const toastTrigger = document.getElementById('liveToastBtn')
+      const toastLiveExample = document.getElementById('liveToast')
+
+      if (toastTrigger) {
+      const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+      toastTrigger.addEventListener('click', () => {
+      toastBootstrap.show()
+
+      // 获取按钮点击的音效元素
+  const buttonSound1 = document.getElementById('buttonSound1');
+  const buttonSound2 = document.getElementById('buttonSound2');
+
+  // 监听右侧第一个按钮点击事件，并播放音效1
+  const toastTrigger = document.getElementById('liveToastBtn');
+  const toastLiveExample = document.getElementById('liveToast');
+
+  if (toastTrigger) {
+    const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+    toastTrigger.addEventListener('click', () => {
+      toastBootstrap.show();
+      buttonSound1.play();
+    });
+  }
+
+  // 监听右侧第二个按钮点击事件，并播放音效2
+  const toastTrigger2 = document.getElementById('liveToastBtn2');
+  const toastLiveExample2 = document.getElementById('liveToast2');
+
+  if (toastTrigger2) {
+    const toastBootstrap2 = bootstrap.Toast.getOrCreateInstance(toastLiveExample2);
+    toastTrigger2.addEventListener('click', () => {
+      toastBootstrap2.show();
+      buttonSound2.play();
+    });
+  }
+
+   })
+}
+    </script>
+  </body>
+</html>
