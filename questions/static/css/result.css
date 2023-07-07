@@ -1,0 +1,87 @@
+
+
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #e5c786;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+}
+.wrapper .container-fluid {
+  max-width: 1600px;
+  margin: auto;
+  position: relative;
+}
+.step_bar_content h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.step {
+  height: 2.0625rem;
+  width: 2.0625rem;
+  font-size: 1.075rem;
+  line-height: 2rem;
+  text-align: center;
+  font-weight: 600;
+  background-color: #c16e14;
+}
+.step:not(:last-child) {
+  margin-right: 1.875rem;
+}
+.step:after {
+  content: "";
+  top: 50%;
+  left: 40px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1.2rem;
+  height: 0.1rem;
+  position: absolute;
+  background-color: #c16e14;
+}
+.step:last-child:after {
+  display: none;
+}
+
+.form_title h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.form_btn .f_btn {
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 800;
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+}
+.form_btn .disable {
+  color: #ffffff;
+  background-color: #172126;
+  margin-right: 0.625rem;
+}
+.form_btn .disable:hover {
+  color: #000000;
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.form_btn .active {
+  color: #ffffff;
+  background-color: #172126;
+}
+.form_btn .active:hover {
+  color: #000000;
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
