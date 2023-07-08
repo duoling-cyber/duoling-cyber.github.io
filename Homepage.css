@@ -183,7 +183,37 @@ a:hover {
 #profile5{
     /* position: relative;s */
     width: 300px;height: 350px;
+    background:url("img/娃哈哈策划案/wahaha.png");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-top-right-radius: 35px !important;
+    border-radius: 6px
+}
+#profile6{
+    /* position: relative;s */
+    width: 300px;height: 350px;
+    background:url("img/爱华仕1956km的陪伴/aihuashi.png");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-top-right-radius: 35px !important;
+    border-radius: 6px
+}
+#profile7{
+    /* position: relative;s */
+    width: 300px;height: 350px;
     background:url("img/curry1.jpg");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-top-right-radius: 35px !important;
+    border-radius: 6px
+}
+#profile8{
+    /* position: relative;s */
+    width: 300px;height: 350px;
+    background:url("img/人像摄影3.jpg");
     background-size: cover;
     cursor: pointer;
     border: 12px;
