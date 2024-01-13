@@ -1,5 +1,5 @@
 body{
-    background:url('img/homepage_background.jpg');
+    background;
 }
 p,li{
     font-family:"SimSun" ;
@@ -16,12 +16,12 @@ p,li{
 }
 
 .nav{
-    color: #D9C9BA;
+    color: #000000;
     padding: 10px 20px;
  }
 
 .navbar-brand{
-    color: #D9C9BA;
+    color: #000000;
     cursor: pointer;
 }
 
@@ -31,7 +31,7 @@ p,li{
     display:block;
     width:0px;
     height:4px;
-    background:#D9C9BA;
+    background:#000000;
     transition: 0.2s;
     margin-top:-10px;
 }
@@ -44,7 +44,7 @@ p,li{
     transition:0.2s;}
 
 .navbar-nav .nav-link {
-    color:#D9C9BA;
+    color:#000000;
     font-size:18px;
 }
 
@@ -54,8 +54,8 @@ p,li{
     height:51px;
 
   border-bottom: .25rem solid transparent;
-  border-bottom-color: #D9C9BA;
-  color: #e5e6e6;
+  border-bottom-color: #000000;
+  color: #000000;
   font-weight: bold
 
 }
@@ -224,6 +224,16 @@ a:hover {
     /* position: relative;s */
     width: 300px;height: 350px;
     background:url("img/tianwangxing.jpg");
+    background-size: cover;
+    cursor: pointer;
+    border: 12px;
+    border-top-right-radius: 35px !important;
+    border-radius: 6px
+}
+#profile10{
+    /* position: relative;s */
+    width: 300px;height: 350px;
+    background:url("img/if.png");
     background-size: cover;
     cursor: pointer;
     border: 12px;
